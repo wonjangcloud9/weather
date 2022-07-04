@@ -3,10 +3,16 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ backgroundColor: "tomato", flex: 1 }}></View>
-      <View style={{ backgroundColor: "teal", flex: 1.5 }}></View>
-      <View style={{ backgroundColor: "orange", flex: 1 }}></View>
+    <View style={styles.container}>
+      <View style={styles.city}>
+        <Text style={styles.cityName}>Seoul</Text>
+      </View>
+      <View style={styles.weather}>
+        <View style={styles.day}>
+          <Text style={styles.temp}>27</Text>
+          <Text style={styles.description}>Sunny</Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -14,12 +20,31 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "tomato",
   },
-  text: {
-    fontSize: 28,
-    color: "red",
+  city: {
+    flex: 1.2,
+
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  cityName: {
+    fontSize: 68,
+    fontWeight: "500",
+  },
+  weather: {
+    flex: 3,
+  },
+  day: {
+    flex: 1,
+    alignItems: "center",
+  },
+  temp: {
+    marginTop: 50,
+    fontSize: 178,
+  },
+  description: {
+    fontSize: 60,
+    marginTop: -30,
   },
 });
