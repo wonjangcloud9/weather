@@ -23,7 +23,7 @@ const icons = {
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
-const API_KEY = "adfd01bf5c72760e4d2cc01a83df17b6";
+const API_KEY = "";
 
 export default function App() {
   const [city, setCity] = useState("Loading...");
